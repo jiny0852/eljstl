@@ -1,3 +1,20 @@
+
+//컬렉션 프레임워크 list set map 하나만 채우면 완벽해지는 personVo
+//spring 은 어플리케이션 프레임워크
+
+//################ spring boot ############
+maven    라이브러리 다운로드 관리
+pom.xml  
+
+
+
+
+
+
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 	<table border="1">
 		<thead>
 			<tr>
@@ -24,6 +41,48 @@
 		</tbody>
 	
 	</table>
+	
+	varStatus = state   $state.index state.count
+	
+	
+		<table border="1">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>이메일</th>
+				<th>패스워드</th>
+				<th>성별</th>
+				
+			</tr>
+		
+		</thead>
+		
+		<tbody>
+		
+			<c:forEach items="${requestScope.userList}" var="userVo">
+				<tr>
+					<td>${userVo.no}</td>
+					<td>${userVo.name}</td>
+					<td>${userVo.email}</td>
+					<td>${userVo.password}</td>
+					<td>${userVo.gender}</td>
+
+				</tr>
+			</c:forEach>
+
+
+
+		</tbody>
+	
+	</table>
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
